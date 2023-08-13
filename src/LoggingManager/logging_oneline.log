@@ -1,0 +1,10 @@
+2023-08-14 05:08:25,578 - DEBUG:logger-1.d.f:mee
+2023-08-14 05:08:25,578 - DEBUG:logger-1.d.f:mee
+2023-08-14 05:08:25,579 - ERROR:logger-1.d.f:daddy
+2023-08-14 05:08:25,579 - ERROR:logger-1.d.f:daddy
+2023-08-14 05:08:25,579 - INFO:logger-1.d.f:mommy  test test2 
+2023-08-14 05:08:25,579 - INFO:logger-1.d.f:mommy  test test2 
+2023-08-14 05:08:25,579 - CRITICAL:logger-1.d.f:fafa: dadaddd,789
+2023-08-14 05:08:25,579 - CRITICAL:logger-1.d.f:fafa: dadaddd,789
+2023-08-14 05:08:25,579 - CRITICAL:logger-1.d.f:fafa: dadaddd,789,        d["aaaa"]=   789
+2023-08-14 05:08:25,579 - CRITICAL:logger-1.d.f:fafa: dadaddd,789,        d["aaaa"]=   789

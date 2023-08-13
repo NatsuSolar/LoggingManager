@@ -1,0 +1,2 @@
+# requirements.txt
+# "LoggingManager(ver.0.1.0)" needs not import of any module.
