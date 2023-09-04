@@ -1,17 +1,17 @@
 """LoggingManager Management"""
 import logging.config
 
-# NOTE: (Aoi, NatusSolar) Logger setting for this module
+# NOTE: (Aoi Natsuki, blautinte8@gmail.com)  Logger setting for this module
 # logging.basicConfig(level=logging.DEBUG)
 # test_logger = logging.getLogger('__name__')
 # test_logger.setLevel(logging.CRITICAL)
 # sh = logging.StreamHandler()
 # test_logger.addHandler(sh)
-# test_logger.debug('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+# test_logger.debug('test: 1XXXXX')
 # test_logger.propagate = True
 # print(test_logger.isEnabledFor(logging.DEBUG))
 
-# NOTE: (Aoi, NatusSolar) For realization of fool proof
+# NOTE: (Aoi Natsuki, blautinte8@gmail.com) For realization of foolproof
 _lv_kinds = {'CRITICAL': logging.CRITICAL,
              'CRI': logging.CRITICAL,
              'FATAL': logging.CRITICAL,
@@ -26,6 +26,23 @@ _lv_kinds = {'CRITICAL': logging.CRITICAL,
              'DEBUG': logging.DEBUG,
              'DEB': logging.DEBUG,
              }
+
+
+def logfile_initializer(oneline=True, detail=True,
+                        online_path='./logging_oneline.log',
+                        detail_path='./logging.log'):
+    """log_initializer"""
+    if oneline:
+        with open(online_path, 'w') as logfile_oneline:
+            logfile_oneline.write('')
+    else:
+        print('Initialization toward oneline-logfile is not done')
+
+    if detail:
+        with open(detail_path, 'w') as logfile_detail:
+            logfile_detail.write('')
+    else:
+        print('Initialization toward detail-logfile is not done')
 
 
 class LoggingBaseFilter(logging.Filter):
@@ -61,17 +78,32 @@ class LoggingManager(object):
         return logger
 
 
-def main():
-    """main"""
+logger = LoggingManager()
+logger = logger.logger_maker(log_lv='Debug', logger_name='logger-1.src.main')
 
-    lll = LoggingManager().logger_maker(log_lv='deb', logger_name='logger-1.d.f')
-    lll.debug('mee')
-    lll.error('daddy')
-    lll.info('mommy  %s %s ' % ('test', 'test2'))
-    d = {'aaa': 'dadaddd', 'aaaa': 789}
-    lll.critical('fafa: %(aaa)s,%(aaaa)s' % d)
-    lll.critical(f'fafa: {d["aaa"]},{d["aaaa"]},{        d["aaaa"]=   }')
-    # test_logger.info('4XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+
+def main():
+    """
+    main()
+
+    Code and Module Test space.
+
+    """
+
+    test_l = LoggingManager().logger_maker(log_lv='deb', logger_name='logger-1.LoggingManager.LoggingManager')
+
+    test_l.debug('Look at Me')
+    test_l.error('Daddy')
+    test_l.critical('Mommy  %s %s ' % ('Hey?', 'Hello---!'))
+    d = {'a': 'AprilFoolProof', 'b': 20240401}
+    test_l.info('Screaming will get into illusion in: %(a)s,%(b)s' % d)
+    test_l.info(f'Screaming gets into illusion in: {d["a"]},{d["b"]},{        d["b"]=   }')
+    # test_logger.info('test: 4XXXXX')
+
+    logger.debug('test')
+    a = 15
+    x = 10 * a
+    logger.info(f"When a={a} and x=10*a, x={x}")
 
 
 if __name__ == '__main__':
