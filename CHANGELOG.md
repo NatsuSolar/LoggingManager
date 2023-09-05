@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.2] - 2023-09-05
+### Added
+- [New function : logfile_initializer() is introduced anew](README.md#012-new-function--logfileinitializer-is-introduced-anew)
+  - With default setting, it will put both of 'logging.log' and 'logging_oneline.log' back on the drawing board.
+
+## [0.1.1] - 2023-09-05
+### Changed
+- [Modify the display format on console and .log files](README.md#011-modify-the-display-format-on-console-and-log-files)
+  - Intended to improve the legibility of logging text  on console and in .log files. 
 
 ## [0.1.0] - 2023-08-14
 
@@ -35,5 +44,7 @@ root
 └── requirements.txt
 ```
 
-[unreleased]: https://github.com/NatsuSolar/LoggingManager/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/NatsuSolar/LoggingManager/releases/tag/v0.1.0
+[unreleased]: https://github.com/NatsuSolar/LoggingManager/compare/0.1.2...HEAD
+[0.1.2]: https://github.com/NatsuSolar/LoggingManager/compare/0.1.1...0.1.2
+[0.1.1]: https://github.com/NatsuSolar/LoggingManager/compare/0.1.0...0.1.1
+[0.1.0]: https://github.com/NatsuSolar/LoggingManager/releases/tag/0.1.0
