@@ -131,7 +131,7 @@ if __name__ == '__main__':
     main()
 ```
 ### Output on Console
-```bash
+```
 2023-09-04 23:11:03,265 - INFO:logger-1.src.ModuleName:When a=15 and x=10*a, x=150
 ```
 #### __ Why only an INFO log is on console?
